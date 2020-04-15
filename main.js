@@ -5,9 +5,9 @@ const checkbox = document.createElement('input');
 const text = document.createTextNode("Toggle All");
 
 checkbox.setAttribute('type', 'checkbox');
-checkbox.classList.add('custom-input');
+checkbox.classList.add('gh-checker-input');
 
-label.classList.add('btn', 'btn-sm');
+label.classList.add('btn', 'btn-sm', 'gh-checker-btn');
 label.appendChild(checkbox);
 label.appendChild(text);
 
