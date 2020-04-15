@@ -1,17 +1,32 @@
 const prReviewTools = document.querySelector('.pr-review-tools');
 
-const btn = document.createElement('button');
-btn.innerHTML = '✔️ Check All';
-btn.classList.add('btn', 'btn-sm');
+const label = document.createElement('label');
+const checkbox = document.createElement('input');
+const text = document.createTextNode("Toggle All");
 
-prReviewTools.appendChild(btn);
+checkbox.setAttribute('type', 'checkbox');
+checkbox.classList.add('custom-input');
 
-btn.addEventListener('click', function(event) {
-  event.preventDefault();
+label.classList.add('btn', 'btn-sm');
+label.appendChild(checkbox);
+label.appendChild(text);
 
-  const labelsToggle = document.querySelectorAll('label.js-reviewed-toggle:not(.js-reviewed-file)');
+prReviewTools.appendChild(label);
 
-  for (const label of labelsToggle) {
+function triggerLabelsClick(labels) {
+  for (const label of labels) {
     label.click();
   }
+}
+
+checkbox.addEventListener('change', function(event) {
+  event.preventDefault();
+
+  const filesClass = !this.checked ?
+    'label.js-reviewed-toggle.js-reviewed-file' :
+    'label.js-reviewed-toggle:not(.js-reviewed-file)';
+
+  const filesLabels = document.querySelectorAll(filesClass);
+
+  triggerLabelsClick(filesLabels);
 });
