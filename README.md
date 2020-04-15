@@ -2,7 +2,29 @@
 
 [![License][license-badge]][license-url] [![Commitizen][commitizen-badge]][commitizen-url]
 
+![Banner](banner.png)
+
 ☑️ An extension for chrome to make it easy to check the revised files of a pull request.
+
+## Install
+
+This browser extension available for:
+
+| <a href="https://chrome.google.com/webstore/detail/codecopy/fkbfebkcoelajmhanocgppanfoojcdmg"><img src="https://cloud.githubusercontent.com/assets/398893/15528951/e9f5dc0a-21fd-11e6-86e7-8a0cad6e7548.png" width="48px" height="48px" alt="Chrome logo"></a> |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+
+
+| [Chrome](https://chrome.google.com/webstore/detail/codecopy/fkbfebkcoelajmhanocgppanfoojcdmg)
+
+## Testing
+
+### Chrome
+
+1. Navigate to `chrome://extensions`;
+
+2. Click on `Load unpacked extension...`;
+
+3. Select the `github-files-checker` folder;
 
 ## Contributing
 
